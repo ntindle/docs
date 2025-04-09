@@ -1,0 +1,14 @@
+import { githubLookup } from "/snippets/github.js";
+
+
+export const GitHubExtractor = async ({
+  owner,
+  repo,
+  path,
+  startMarker,
+  endMarker,
+  branch = 'main',
+  language = 'python',
+}) => {
+  return githubLookup(owner,repo,path,startMarker,endMarker,branch,language)
+};

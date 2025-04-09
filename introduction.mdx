@@ -2,6 +2,7 @@
 title: Introduction
 description: "Welcome to the home of your new documentation"
 ---
+import { GitHubExtractor } from "/snippets/github-test.mdx";
 
 <img
   className="block dark:hidden"
@@ -13,6 +14,17 @@ description: "Welcome to the home of your new documentation"
   src="/images/hero-dark.png"
   alt="Hero Dark"
 />
+
+<GitHubExtractor
+  owner="significant-gravitas"
+  repo="autogpt"
+  path="autogpt_platform/backend/backend/util/settings.py"
+  branch="master"
+  startMarker="# --8<-- [start:OAuthServerCredentialsExample]"
+  endMarker="# --8<-- [end:OAuthServerCredentialsExample]"
+  language="python"
+/>
+
 
 ## Setting up
 
