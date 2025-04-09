@@ -2,7 +2,9 @@
 title: Introduction
 description: "Welcome to the home of your new documentation"
 ---
-import { GitHubExtractor } from "/snippets/github-test.mdx";
+import { GitHubExtractorViaFunc } from "/snippets/github-test.mdx";
+
+// import { GitHubExtractor } from "/snippets/github-extractor.mdx";
 
 <img
   className="block dark:hidden"
@@ -15,7 +17,18 @@ import { GitHubExtractor } from "/snippets/github-test.mdx";
   alt="Hero Dark"
 />
 
-<GitHubExtractor
+{/* <GitHubExtractor
+  owner="significant-gravitas"
+  repo="autogpt"
+  path="autogpt_platform/backend/backend/util/settings.py"
+  branch="master"
+  startMarker="# --8<-- [start:OAuthServerCredentialsExample]"
+  endMarker="# --8<-- [end:OAuthServerCredentialsExample]"
+  language="python"
+/> */}
+
+
+<GitHubExtractorViaFunc
   owner="significant-gravitas"
   repo="autogpt"
   path="autogpt_platform/backend/backend/util/settings.py"
@@ -24,7 +37,6 @@ import { GitHubExtractor } from "/snippets/github-test.mdx";
   endMarker="# --8<-- [end:OAuthServerCredentialsExample]"
   language="python"
 />
-
 
 ## Setting up
 

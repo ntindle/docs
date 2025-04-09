@@ -1,0 +1,21 @@
+export const GitHubExtractor = async ({
+  owner,
+  repo,
+  path,
+  startMarker,
+  endMarker,
+  branch = 'main',
+  language = 'python',
+}) => {
+
+  const response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}`);
+  const text = await response.text();
+
+  let codeContent = '';
+
+  codeContent = text;
+
+  return `\`\`\`${language}
+${codeContent};
+\`\`\``;
+};
